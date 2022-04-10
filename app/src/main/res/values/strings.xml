@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Composition</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_level_test_title">Тестовый</string>
+    <string name="button_level_easy_title">Лёгкий</string>
+    <string name="button_level_normal_title">Нормальный</string>
+    <string name="button_level_hard_title">Тяжелый</string>
+    <string name="tv_title_text">Выберите уровень:</string>
+    <string name="iv_title_text">Состав числа</string>
+    <string name="tv_description_text">
+        Правила игры: перед вами три фигуры с числами и знаком вопроса. Вам необходимо угадать, какое число скрывается под знаком вопроса, зная при этом, что это число в сумме с числом слева от него будет равняться числу сверху.
+        Пример: Сверху "7", снизу "4" и "?". Правильный ответ будет 7-4=3.
+        Удачи!</string>
+    <string name="button_understand_text">Понятно</string>
+    <string name="question_mark">\?</string>
+    <string name="progress_answer">Правильных ответов %s (минимум %s)</string>
+    <string name="required_score">Необходимое количество правильных ответов: %s</string>
+    <string name="your_score">Ваш счёт: %s</string>
+    <string name="required_percent">Необходимое процент правильных ответов: %s</string>
+    <string name="your_percent">Процент правильных ответов: %s</string>
+    <string name="repeat_game">Попробовать снова</string>
 </resources>
