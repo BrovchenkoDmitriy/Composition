@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.GamrFinishedFragment" >
+    tools:context=".presentation.GameFinishedFragment" >
 
     <ImageView
         android:id="@+id/emoji_result"
@@ -61,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_required_percent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/repeat_game"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/repeat_game"
