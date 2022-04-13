@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#CDDC39"
         android:text="@string/button_level_test_title" />
 
     <Button
@@ -30,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#FFC107"
         android:backgroundTintMode="@android:color/holo_green_light"
         android:text="@string/button_level_easy_title" />
 
@@ -39,6 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#FF9800"
         android:backgroundTintMode="@android:color/holo_orange_light"
         android:text="@string/button_level_normal_title" />
 
@@ -48,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#FF5722"
         android:backgroundTintMode="@android:color/holo_red_light"
         android:text="@string/button_level_hard_title" />
 </LinearLayout>
