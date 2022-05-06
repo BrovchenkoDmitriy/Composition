@@ -60,10 +60,11 @@ class GameFragmentViewModel(application: Application) : AndroidViewModel(applica
     private var countOfRightAnswer = 0
     private var countOfQuestions = 0
 
-    fun startGame() {
+    fun startGame(level:Level) {
         getGameSettings(level)
         startTimer()
         generateQuestion()
+        updateProgress()
     }
 
     fun chooseAnswer(number: Int) {
@@ -121,7 +122,7 @@ class GameFragmentViewModel(application: Application) : AndroidViewModel(applica
         val seconds = millisUntilFinished / MILLIS_IN_SECONDS
         val minutes = seconds / SECONDS_IN_MINUTE
         val leftSeconds = seconds - (minutes * SECONDS_IN_MINUTE)
-        return String.format("%2d%2d", minutes, leftSeconds)
+        return String.format("%02d:%02d", minutes, leftSeconds)
     }
 
     fun generateQuestion() {
@@ -141,6 +142,9 @@ class GameFragmentViewModel(application: Application) : AndroidViewModel(applica
     }
 
     private fun calculatePercentOfRightAnswers(): Int {
+        if (countOfQuestions==0) {
+            return 0
+        }
         return ((countOfRightAnswer / countOfQuestions.toDouble()) * 100).toInt()
     }
 
