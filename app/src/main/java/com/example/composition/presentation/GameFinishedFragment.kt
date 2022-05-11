@@ -41,43 +41,44 @@ class GameFinishedFragment : Fragment() {
     }
 
     private fun bindViews() {
+        binding.gameResult = args.gameResult
 
-        val emoji = if (gameResult.winner) {
-            R.drawable.win_smile
-        } else {
-            R.drawable.lose_smile
-        }
-        with(binding) {
-            emojiResult.setImageResource(emoji)
+//        val emoji = if (gameResult.winner) {
+//            R.drawable.win_smile
+//        } else {
+//            R.drawable.lose_smile
+//        }
+//        with(binding) {
+//            emojiResult.setImageResource(emoji)
 
-            tvRequiredScore.text = String.format(
-                getString(R.string.required_score),
-                gameResult.gameSettings.minCountOfRightAnswers
-            )
+//            tvRequiredScore.text = String.format(
+//                getString(R.string.required_score),
+//                gameResult.gameSettings.minCountOfRightAnswers
+//            )
 
-            tvRequiredPercent.text = String.format(
-                getString(R.string.required_percent),
-                gameResult.gameSettings.minPercentOfRightAnswers
-            )
+//            tvRequiredPercent.text = String.format(
+//                getString(R.string.required_percent),
+//                gameResult.gameSettings.minPercentOfRightAnswers
+//            )
 
-            tvYourScore.text =
-                String.format(getString(R.string.your_score), gameResult.countOfRightAnswers)
-
-            tvYourPercent.text = String.format(
-                getString(R.string.your_percent),
-                getYourPercent()
-            )
-        }
+//            tvYourScore.text =
+//                String.format(getString(R.string.your_score), gameResult.countOfRightAnswers)
+//
+//            tvYourPercent.text = String.format(
+//                getString(R.string.your_percent),
+//                getYourPercent()
+//            )
+//        }
 
     }
 
-    private fun getYourPercent(): Int {
-        return if (gameResult.countOfAnswers == 0) {
-            0
-        } else {
-            ((gameResult.countOfRightAnswers / gameResult.countOfAnswers.toDouble()) * 100).toInt()
-        }
-    }
+//    private fun getYourPercent(): Int {
+//        return if (gameResult.countOfAnswers == 0) {
+//            0
+//        } else {
+//            ((gameResult.countOfRightAnswers / gameResult.countOfAnswers.toDouble()) * 100).toInt()
+//        }
+//    }
 
     private fun retryGame() {
         findNavController().popBackStack()
